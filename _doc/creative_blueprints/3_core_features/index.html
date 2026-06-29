@@ -1,0 +1,72 @@
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12">
+
+    <!-- Header -->
+    <div class="mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3" style="background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.18);">
+        <span class="text-xs font-semibold uppercase tracking-widest" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">What {{config.appName}} Does</span>
+      </div>
+      <h2 class="text-4xl font-extrabold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Core Features</h2>
+    </div>
+
+    <!-- Persona chips -->
+    <div class="flex gap-2 mb-6">
+      <div class="px-4 py-1.5 rounded-full text-sm font-semibold" style="background: {{config.brandColor.primary}}; color: white; font-family: {{config.font.textFont}}, sans-serif;">🎓 Daily Learner</div>
+      <div class="px-4 py-1.5 rounded-full text-sm font-medium" style="background: rgba(6,182,212,0.1); color: {{config.brandColor.secondary}}; border: 1px solid rgba(6,182,212,0.25); font-family: {{config.font.textFont}}, sans-serif;">💼 Business Professional</div>
+      <div class="px-4 py-1.5 rounded-full text-sm font-medium" style="background: rgba(245,158,11,0.1); color: #92400e; border: 1px solid rgba(245,158,11,0.25); font-family: {{config.font.textFont}}, sans-serif;">🎯 Exam Preparer</div>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="grid grid-cols-3 gap-4 flex-1">
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(99,102,241,0.03) 100%); border: 1px solid rgba(99,102,241,0.18);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: {{config.brandColor.primary}};">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">AI Voice Conversations</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Natural spoken dialogue with an AI tutor that adapts to your level and corrects without interrupting flow.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(6,182,212,0.07) 0%, rgba(6,182,212,0.03) 100%); border: 1px solid rgba(6,182,212,0.2);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: {{config.brandColor.secondary}};">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Personalized Learning Path</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Proficiency assessment at onboarding; AI continuously adapts content, difficulty, and focus areas based on your progress.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(245,158,11,0.07) 0%, rgba(245,158,11,0.03) 100%); border: 1px solid rgba(245,158,11,0.2);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: {{config.brandColor.accent}};">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Real-Life Scenarios</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Practice ordering food, business meetings, job interviews, travel, presentations — real situations with guided AI coaching.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(6,182,212,0.05) 100%); border: 1px solid rgba(99,102,241,0.12);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: #1e1b4b;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Pronunciation Scoring</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Real-time pronunciation score with targeted tips on specific sounds and patterns after each speaking turn.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(6,182,212,0.05) 0%, rgba(99,102,241,0.05) 100%); border: 1px solid rgba(6,182,212,0.15);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: #0891b2;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Progress Dashboard</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Streak, pronunciation score, grammar improvement, vocabulary growth, and weekly progress — all visible at a glance.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl flex flex-col gap-2" style="background: linear-gradient(135deg, rgba(245,158,11,0.05) 0%, rgba(99,102,241,0.05) 100%); border: 1px solid rgba(245,158,11,0.15);">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background: #d97706;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div class="font-bold text-sm" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">AI Coach Notifications</div>
+        <p class="text-xs leading-relaxed" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Daily reminders, weekly summaries, milestone alerts, and motivation messages — fully user-configurable frequency and types.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
