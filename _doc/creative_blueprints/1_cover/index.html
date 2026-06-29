@@ -1,0 +1,75 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-visual { width: 45%; }
+  .mode-portrait .sl-visual { width: 100%; height: 40%; }
+  .mode-landscape .sl-content { width: 55%; }
+  .mode-portrait .sl-content { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: Content -->
+    <div class="sl-content flex flex-col justify-between p-12" style="background: white;">
+      <!-- Top: Logo + App Name -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: {{config.brandColor.primary}};">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </div>
+        <span class="text-lg font-bold tracking-tight" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">{{config.appName}}</span>
+      </div>
+
+      <!-- Center: Headline -->
+      <div class="flex-1 flex flex-col justify-center gap-5">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full w-fit" style="background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.18);">
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">AI Language Coach</span>
+        </div>
+        <h1 class="text-5xl font-extrabold leading-tight" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">
+          Speak English<br/>
+          <span style="color: {{config.brandColor.primary}};">with Confidence</span>
+        </h1>
+        <p class="text-lg leading-relaxed max-w-sm" style="color: #475569; font-family: {{config.font.textFont}}, sans-serif;">
+          {{config.tagline}}
+        </p>
+
+        <!-- Stats row -->
+        <div class="flex gap-6 mt-2">
+          <div>
+            <div class="text-2xl font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">24/7</div>
+            <div class="text-xs" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Always Available</div>
+          </div>
+          <div class="w-px" style="background: #e2e8f0;"></div>
+          <div>
+            <div class="text-2xl font-bold" style="color: {{config.brandColor.secondary}}; font-family: {{config.font.headingFont}}, sans-serif;">3 Levels</div>
+            <div class="text-xs" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Beginner → Advanced</div>
+          </div>
+          <div class="w-px" style="background: #e2e8f0;"></div>
+          <div>
+            <div class="text-2xl font-bold" style="color: {{config.brandColor.accent}}; font-family: {{config.font.headingFont}}, sans-serif;">Real Voice</div>
+            <div class="text-xs" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">AI Conversations</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <data-attribution />
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-visual flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(145deg, #6366f1 0%, #818cf8 40%, #06b6d4 100%);">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20friendly%20AI%20voice%20tutor%20interface%20on%20a%20smartphone%2C%20glowing%20waveform%20visualization%2C%20speech%20bubbles%20with%20pronunciation%20feedback%2C%20modern%20minimal%20design%2C%20indigo%20and%20cyan%20color%20palette%2C%20clean%20white%20UI%20elements"
+        class="w-full h-full object-cover opacity-90"
+        alt="SpeakUp AI tutor interface"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(99,102,241,0.18) 0%, transparent 60%);"></div>
+    </div>
+
+  </div>
+</section>
