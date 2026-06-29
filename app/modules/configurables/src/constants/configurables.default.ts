@@ -64,67 +64,95 @@ export type TDefaultConfigurableData = {
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  // SpeakUp identity
+  appTagline?: string;
+  appDescription?: string;
+  // Learning config
+  proficiencyLevels?: string[];
+  practiceScenarios?: { id: string; title: string; icon?: string; description?: string }[];
+  dailyGoalMinutes?: number;
+  maxStreakDisplayDays?: number;
+  enableNotifications?: boolean;
+  enableAchievementBadges?: boolean;
+  enableDailyChallenges?: boolean;
+  // Landing page copy
+  heroHeading?: string;
+  heroSubheading?: string;
+  heroCTA?: string;
+  landingFeatures?: { icon: string; title: string; description?: string }[];
+  // AI tutor config
+  aiTutorSystemPrompt?: string;
+  aiTutorName?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
   logoUrl: "",
-  brandColor: {
-    // Base
-    background:        "#ffffff",
-    foreground:        "#09090b",
-    // Card
-    card:              "#ffffff",
-    cardForeground:    "#09090b",
-    // Popover
-    popover:           "#ffffff",
-    popoverForeground: "#09090b",
-    // Primary
-    primary:           "#2563eb",
-    primaryForeground: "#ffffff",
-    // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
-    // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
-    // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
-    // Destructive
-    destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
-    // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
-    // Charts
-    chart1: "#f97316",
-    chart2: "#0d9488",
-    chart3: "#1e3a5f",
-    chart4: "#d4a017",
-    chart5: "#ea580c",
-    // Navbar
-    navbarBackground: "#ffffff",
-    // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
-    sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
-  },
   font: {
-    headingFont: "Plus Jakarta Sans",
+    headingFont: "Outfit",
     textFont: "Inter",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // ─────────────────────────────────────────────────────────────────────
+  // ── SpeakUp Defaults ─────────────────────────────────────────────────
+  appName: "SpeakUp",
+  brandColor: {
+    background: "#F8F9FF",
+    foreground: "#1E1B4B",
+    card: "#FFFFFF",
+    cardForeground: "#1E1B4B",
+    popover: "#FFFFFF",
+    popoverForeground: "#1E1B4B",
+    primary: "#6366F1",
+    primaryForeground: "#FFFFFF",
+    secondary: "#06B6D4",
+    secondaryForeground: "#FFFFFF",
+    muted: "#EEF2FF",
+    mutedForeground: "#6B7280",
+    accent: "#F59E0B",
+    accentForeground: "#FFFFFF",
+    destructive: "#EF4444",
+    destructiveForeground: "#FFFFFF",
+    border: "#E0E7FF",
+    input: "#E0E7FF",
+    ring: "#6366F1",
+    chart1: "#6366F1",
+    chart2: "#06B6D4",
+    chart3: "#F59E0B",
+    chart4: "#10B981",
+    chart5: "#F43F5E",
+    navbarBackground: "#6366F1",
+    sidebarBackground: "#1E1B4B",
+    sidebarForeground: "#E0E7FF",
+    sidebarPrimary: "#6366F1",
+    sidebarPrimaryForeground: "#FFFFFF",
+    sidebarAccent: "#312E81",
+    sidebarAccentForeground: "#E0E7FF",
+    sidebarBorder: "#312E81",
+    sidebarRing: "#6366F1",
+  },
+  appTagline: "Your AI English tutor — patient, personalized, always on",
+  appDescription: "Practice speaking English with your personal AI tutor available 24/7. Get instant feedback on pronunciation, grammar, and fluency.",
+  proficiencyLevels: ["Beginner", "Intermediate", "Advanced"],
+  practiceScenarios: [
+    { id: "daily-conversation", title: "Daily Conversation", icon: "💬", description: "Practice everyday small talk and common situations" },
+    { id: "business-english",   title: "Business English",   icon: "💼", description: "Master professional communication and meetings" },
+    { id: "job-interview",      title: "Job Interview",      icon: "🎯", description: "Prepare for interview questions with confidence" },
+    { id: "travel-english",     title: "Travel English",     icon: "✈️", description: "Navigate airports, hotels, and tourist spots" },
+    { id: "presentations",      title: "Presentations",      icon: "📊", description: "Deliver clear and compelling presentations" },
+    { id: "ordering-food",      title: "Ordering Food",      icon: "🍽️", description: "Confidently order at restaurants and cafes" },
+  ],
+  dailyGoalMinutes: 15,
+  maxStreakDisplayDays: 365,
+  enableNotifications: true,
+  enableAchievementBadges: true,
+  enableDailyChallenges: true,
+  heroHeading: "Speak English With Confidence",
+  heroSubheading: "Your personal AI English tutor — available 24/7, judgment-free, and tailored to your goals.",
+  heroCTA: "Start Speaking Now",
+  landingFeatures: [
+    { icon: "🎙️", title: "Voice Conversations", description: "Have real conversations with your AI tutor and get instant feedback" },
+    { icon: "📈", title: "Track Your Progress", description: "See your pronunciation, grammar, and vocabulary improve over time" },
+    { icon: "🎯", title: "Personalized Path", description: "AI adapts to your level and goals for the fastest improvement" },
+    { icon: "🏆", title: "Daily Challenges", description: "Short exercises with streak tracking to keep you consistent" },
+  ],
+  aiTutorName: "Aria",
+  aiTutorSystemPrompt: "You are Aria, a friendly and encouraging AI English speaking tutor. Your role is to help non-native English speakers improve their spoken English through natural conversation. After each user message, provide conversational responses, then briefly note any pronunciation tips, grammar corrections, or vocabulary suggestions in a kind, non-interruptive way. Always encourage the learner and celebrate their progress.",
 };

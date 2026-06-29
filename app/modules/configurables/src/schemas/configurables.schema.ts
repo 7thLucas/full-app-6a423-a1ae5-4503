@@ -99,6 +99,56 @@ export const configurableSchemas: ConfigurableSchemas = {
       ],
     },
 
+    // ── SpeakUp App Identity ──────────────────────────────────────────────
+    { fieldName: "appTagline",    type: "string", required: false, label: "App Tagline" },
+    { fieldName: "appDescription", type: "string", required: false, label: "App Description" },
+    // ── Learning Config ───────────────────────────────────────────────────
+    {
+      fieldName: "proficiencyLevels",
+      type: "array",
+      label: "Proficiency Levels",
+      item: { type: "string", required: true },
+    },
+    {
+      fieldName: "practiceScenarios",
+      type: "array",
+      label: "Practice Scenarios",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "id",    type: "string", required: true, label: "ID" },
+          { fieldName: "title", type: "string", required: true, label: "Title" },
+          { fieldName: "icon",  type: "string", required: false, label: "Icon (emoji)" },
+          { fieldName: "description", type: "string", required: false, label: "Description" },
+        ],
+      },
+    },
+    { fieldName: "dailyGoalMinutes",       type: "number", required: false, label: "Daily Goal (minutes)", min: 1, max: 120 },
+    { fieldName: "maxStreakDisplayDays",   type: "number", required: false, label: "Max Streak Display", min: 1, max: 365 },
+    { fieldName: "enableNotifications",    type: "boolean", required: false, label: "Enable AI Coach Notifications" },
+    { fieldName: "enableAchievementBadges", type: "boolean", required: false, label: "Enable Achievement Badges" },
+    { fieldName: "enableDailyChallenges",  type: "boolean", required: false, label: "Enable Daily Challenges" },
+    // ── Landing Page Copy ─────────────────────────────────────────────────
+    { fieldName: "heroHeading",    type: "string", required: false, label: "Hero Heading" },
+    { fieldName: "heroSubheading", type: "string", required: false, label: "Hero Subheading" },
+    { fieldName: "heroCTA",        type: "string", required: false, label: "Hero CTA Button" },
+    {
+      fieldName: "landingFeatures",
+      type: "array",
+      label: "Landing Features",
+      item: {
+        type: "object",
+        fields: [
+          { fieldName: "icon",        type: "string", required: true,  label: "Icon (emoji)" },
+          { fieldName: "title",       type: "string", required: true,  label: "Title" },
+          { fieldName: "description", type: "string", required: false, label: "Description" },
+        ],
+      },
+    },
+    // ── AI Tutor Config ───────────────────────────────────────────────────
+    { fieldName: "aiTutorSystemPrompt", type: "string", required: false, label: "AI Tutor System Prompt" },
+    { fieldName: "aiTutorName",         type: "string", required: false, label: "AI Tutor Name" },
+
     {
       fieldName: "font",
       type: "object",
