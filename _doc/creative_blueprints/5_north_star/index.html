@@ -1,0 +1,86 @@
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12">
+
+    <!-- Header -->
+    <div class="mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3" style="background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.18);">
+        <span class="text-xs font-semibold uppercase tracking-widest" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">North Star</span>
+      </div>
+      <h2 class="text-4xl font-extrabold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Weekly Verified Operations</h2>
+      <p class="text-sm mt-1" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Projected impact — based on your inputs</p>
+    </div>
+
+    <!-- Core operation definition -->
+    <div class="p-5 rounded-2xl mb-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(6,182,212,0.06) 100%); border: 1.5px solid rgba(99,102,241,0.2);">
+      <div class="font-bold text-sm mb-2" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Verified Operation Types</div>
+      <div class="flex gap-3 flex-wrap">
+        <div class="px-4 py-2 rounded-xl text-sm font-semibold" style="background: {{config.brandColor.primary}}; color: white; font-family: {{config.font.textFont}}, sans-serif;">🎤 Speaking Session Completed</div>
+        <div class="px-4 py-2 rounded-xl text-sm font-semibold" style="background: {{config.brandColor.secondary}}; color: white; font-family: {{config.font.textFont}}, sans-serif;">✅ Daily Challenge Submitted</div>
+        <div class="px-4 py-2 rounded-xl text-sm font-semibold" style="background: #1e1b4b; color: white; font-family: {{config.font.textFont}}, sans-serif;">📊 Pronunciation Score Recorded</div>
+      </div>
+      <p class="text-xs mt-3" style="color: #475569; font-family: {{config.font.textFont}}, sans-serif;">A verified operation = a learner completes a full speaking session, submits a daily challenge, or records a pronunciation score. Page views and logins are not counted.</p>
+    </div>
+
+    <!-- WVO Projection + Value -->
+    <div class="grid grid-cols-2 gap-4 flex-1">
+
+      <!-- Left: WVO formula -->
+      <div class="p-6 rounded-2xl flex flex-col gap-4" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">WVO Projection</div>
+
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-center p-3 rounded-xl" style="background: white; border: 1px solid #e2e8f0;">
+            <span class="text-xs" style="color: #475569; font-family: {{config.font.textFont}}, sans-serif;">Active learners / week</span>
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">100</span>
+              <span class="text-xs px-2 py-0.5 rounded-full" style="background: rgba(245,158,11,0.12); color: #92400e; font-family: {{config.font.textFont}}, sans-serif;">Assumption — adjust this</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center p-3 rounded-xl" style="background: white; border: 1px solid #e2e8f0;">
+            <span class="text-xs" style="color: #475569; font-family: {{config.font.textFont}}, sans-serif;">Sessions per learner per week</span>
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">3</span>
+              <span class="text-xs px-2 py-0.5 rounded-full" style="background: rgba(245,158,11,0.12); color: #92400e; font-family: {{config.font.textFont}}, sans-serif;">Assumption — adjust this</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, {{config.brandColor.primary}}, #818cf8); color: white;">
+          <div class="text-xs font-medium opacity-80 mb-1" style="font-family: {{config.font.textFont}}, sans-serif;">100 learners × 3 sessions/wk =</div>
+          <div class="text-3xl font-extrabold" style="font-family: {{config.font.headingFont}}, sans-serif;">300</div>
+          <div class="text-xs opacity-90" style="font-family: {{config.font.textFont}}, sans-serif;">Verified Operations / Week</div>
+        </div>
+      </div>
+
+      <!-- Right: Value & ROI -->
+      <div class="p-6 rounded-2xl flex flex-col gap-4" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Value Derivation</div>
+
+        <div class="flex flex-col gap-3">
+          <div class="p-3 rounded-xl" style="background: white; border: 1px solid #e2e8f0;">
+            <div class="text-xs mb-1" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Time saved vs. scheduling a tutor</div>
+            <div class="text-sm font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">30 min/session × 300 sessions/wk = 150 hrs saved</div>
+          </div>
+          <div class="p-3 rounded-xl" style="background: white; border: 1px solid #e2e8f0;">
+            <div class="text-xs mb-1" style="color: #64748b; font-family: {{config.font.textFont}}, sans-serif;">Tutor cost replaced (@ $40/hr avg)</div>
+            <div class="text-sm font-bold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">150 hrs × $40 = $6,000 / week</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 mt-auto">
+          <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, {{config.brandColor.secondary}}, #0891b2); color: white;">
+            <div class="text-2xl font-extrabold" style="font-family: {{config.font.headingFont}}, sans-serif;">$6K</div>
+            <div class="text-xs opacity-90 mt-0.5" style="font-family: {{config.font.textFont}}, sans-serif;">Value / Week</div>
+          </div>
+          <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, {{config.brandColor.accent}}, #d97706); color: white;">
+            <div class="text-2xl font-extrabold" style="font-family: {{config.font.headingFont}}, sans-serif;">$312K</div>
+            <div class="text-xs opacity-90 mt-0.5" style="font-family: {{config.font.textFont}}, sans-serif;">Value / Year (×52)</div>
+          </div>
+        </div>
+
+        <p class="text-xs mt-1" style="color: #94a3b8; font-family: {{config.font.textFont}}, sans-serif;">All figures derived from the assumption chips above. Update learner count and sessions/wk to get your actual projections.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
