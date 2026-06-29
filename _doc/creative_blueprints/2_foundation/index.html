@@ -1,0 +1,86 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; gap: 2.5rem; }
+  .mode-portrait .sl-layout { flex-direction: column; gap: 1.5rem; }
+  .mode-landscape .sl-col { width: 50%; }
+  .mode-portrait .sl-col { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12">
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-3" style="background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.18);">
+        <span class="text-xs font-semibold uppercase tracking-widest" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">The Opportunity</span>
+      </div>
+      <h2 class="text-4xl font-extrabold" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">Problem &amp; Solution</h2>
+    </div>
+
+    <!-- Two columns -->
+    <div class="sl-layout flex flex-1">
+
+      <!-- Problem -->
+      <div class="sl-col flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center" style="background: #fef2f2;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3 class="text-lg font-bold" style="color: #ef4444; font-family: {{config.font.headingFont}}, sans-serif;">The Problem</h3>
+        </div>
+
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="p-4 rounded-xl" style="background: #fef2f2; border: 1px solid #fecaca;">
+            <div class="font-semibold text-sm mb-1" style="color: #991b1b; font-family: {{config.font.headingFont}}, sans-serif;">No Safe Space to Practice</div>
+            <p class="text-sm" style="color: #7f1d1d; font-family: {{config.font.textFont}}, sans-serif;">English learners feel judged or embarrassed speaking in real life, so they never build real fluency — even after years of study.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background: #fff7ed; border: 1px solid #fed7aa;">
+            <div class="font-semibold text-sm mb-1" style="color: #9a3412; font-family: {{config.font.headingFont}}, sans-serif;">Human Tutors Are Expensive &amp; Rigid</div>
+            <p class="text-sm" style="color: #7c2d12; font-family: {{config.font.textFont}}, sans-serif;">Private English lessons cost $30–80/hr and require scheduling — most learners can't afford consistent access to quality coaching.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background: #faf5ff; border: 1px solid #e9d5ff;">
+            <div class="font-semibold text-sm mb-1" style="color: #6b21a8; font-family: {{config.font.headingFont}}, sans-serif;">Generic Apps Don't Fix Speaking</div>
+            <p class="text-sm" style="color: #581c87; font-family: {{config.font.textFont}}, sans-serif;">Existing language apps focus on vocabulary and reading — not real spoken conversation, pronunciation, or personalized fluency coaching.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-px self-stretch" style="background: #e2e8f0; margin: 0 0.5rem;"></div>
+
+      <!-- Solution -->
+      <div class="sl-col flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center" style="background: rgba(99,102,241,0.1);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="text-lg font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">The Solution</h3>
+        </div>
+
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="p-4 rounded-xl" style="background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.18);">
+            <div class="font-semibold text-sm mb-1" style="color: #1e1b4b; font-family: {{config.font.headingFont}}, sans-serif;">24/7 AI Voice Tutor</div>
+            <p class="text-sm" style="color: #475569; font-family: {{config.font.textFont}}, sans-serif;">{{config.appName}} provides a judgment-free AI conversation partner available any time — practice a job interview at midnight, order food during your commute.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background: rgba(6,182,212,0.06); border: 1px solid rgba(6,182,212,0.2);">
+            <div class="font-semibold text-sm mb-1" style="color: #0e7490; font-family: {{config.font.headingFont}}, sans-serif;">Instant Personalized Feedback</div>
+            <p class="text-sm" style="color: #155e75; font-family: {{config.font.textFont}}, sans-serif;">After each voice turn, the AI scores pronunciation, flags grammar issues, and suggests more natural phrasing — without ever cutting the conversation short.</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.2);">
+            <div class="font-semibold text-sm mb-1" style="color: #92400e; font-family: {{config.font.headingFont}}, sans-serif;">Adaptive Learning Path</div>
+            <p class="text-sm" style="color: #78350f; font-family: {{config.font.textFont}}, sans-serif;">From proficiency assessment to daily challenges, the AI continuously adapts lesson difficulty and content to match the learner's progress and recurring weak spots.</p>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="mt-4 rounded-xl overflow-hidden" style="height: 120px;">
+          <img
+            src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20confident%20adult%20learner%20speaking%20into%20a%20phone%2C%20AI%20waveform%20and%20feedback%20bubbles%20floating%20around%2C%20warm%20encouraging%20atmosphere%2C%20modern%20flat%20illustration%2C%20indigo%20and%20cyan%20tones"
+            class="w-full h-full object-cover"
+            alt="Learner using SpeakUp"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
